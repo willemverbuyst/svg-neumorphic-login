@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
-
 import SVG from './SVG';
+
 export default function Header() {
   return (
     <div>
@@ -28,7 +27,7 @@ const moveIn = keyframes`
     box-shadow: none;
   }
   100% {
-    left: 2.4rem;
+    left: 2vw;
     box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
   }
 `;
@@ -42,8 +41,7 @@ const changeFontColor = keyframes`
   }
 `;
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
+const StyledLink = styled(NavLink)`
   animation: ${changeFontColor} 2s forwards ease-out;
   transition: 0.4s ease-in-out;
 
@@ -61,36 +59,35 @@ const StyledLink = styled(Link)`
 `;
 
 const LogoLink = styled.div`
-  width: 18rem;
-  height: 18rem;
-  font-size: 4.5rem;
+  width: 15vw;
+  height: 15vw;
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
   background-color: #f3f3f3;
   border-radius: 50%;
+  font-size: 4vw;
   font-weight: 700;
-  position: absolute;
-  top: 2.4rem;
-  left: 2.4rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 10;
   animation: ${moveIn} 2s forwards ease-out;
+  z-index: 10;
 `;
 
 const LoginLink = styled.div`
   width: 8rem;
   height: 8rem;
-  font-size: 2rem;
-  background-color: #f3f3f3;
-  border-radius: 50%;
-  border: 1px solid #07b2d9;
-  font-weight: 700;
   position: absolute;
   top: 2.4rem;
   right: 2.4rem;
+  background-color: #f3f3f3;
+  border-radius: 50%;
+  border: 1px solid #07b2d9;
+  font-size: 2rem;
+  font-weight: 700;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 `;

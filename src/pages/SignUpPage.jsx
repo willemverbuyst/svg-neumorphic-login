@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-export default function LoginPage() {
+export default function SignUpPage() {
   const handleClick = (e) => {
     e.preventDefault();
     console.log('clicked login button');
@@ -14,19 +13,17 @@ export default function LoginPage() {
       <Main>
         <form>
           <div>
+            <Input type="name" placeholder="full name" />
+          </div>
+          <div>
             <Input type="email" placeholder="email" />
           </div>
           <div>
             <Input type="password" placeholder="password" />
           </div>
           <div>
-            <Button onClick={(e) => handleClick(e)}>Login</Button>
+            <Button onClick={(e) => handleClick(e)}>Sign Up</Button>
           </div>
-
-          <Links>
-            <Llink to="/">Forgot password?</Llink> or{' '}
-            <Llink to="/signup">Sign up</Llink>
-          </Links>
         </form>
       </Main>
     </div>
@@ -85,14 +82,4 @@ const Button = styled.button`
   &:active {
     box-shadow: inset 1px 1px 3px #cbced1, inset -1px -1px 3px #fff;
   }
-`;
-
-const Links = styled.div`
-  padding-top: 2rem;
-`;
-
-const Llink = styled(Link)`
-  text-decoration: none;
-  color: #068bbf;
-  font-size: 1.5rem;
 `;
