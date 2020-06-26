@@ -6,7 +6,6 @@ import styled from 'styled-components';
 export default function LoginPage() {
   const handleClick = (e) => {
     e.preventDefault();
-    console.log('clicked login button');
   };
 
   return (
