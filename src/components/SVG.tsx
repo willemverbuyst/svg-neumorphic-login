@@ -1,6 +1,6 @@
-import React from 'react';
+import { ReactElement } from 'react';
 
-export default function SVG() {
+const SVG = (): ReactElement => {
   return (
     <div>
       <div>
@@ -24,4 +24,6 @@ export default function SVG() {
       </div>
     </div>
   );
-}
+};
+
+export default SVG;
