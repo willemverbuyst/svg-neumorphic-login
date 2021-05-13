@@ -1,5 +1,6 @@
-import { ReactElement, MouseEvent } from 'react';
-import { Main, Form, Input, Button } from '../style';
+import { MouseEvent, ReactElement } from 'react';
+
+import { Button, Form, Input, Main } from '../style';
 
 const SignUpPage = (): ReactElement => {
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {

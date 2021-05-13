@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
-import { LogoLink, StyledLink, LoginLink } from '../style';
+
+import { LoginLink, LogoLink, StyledLink } from '../style';
 import SVG from './SVG';
 
 const Header = (): ReactElement => {
