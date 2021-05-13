@@ -1,9 +1,8 @@
-import React from 'react';
-
+import { ReactElement, MouseEvent } from 'react';
 import styled from 'styled-components';
 
-export default function SignUpPage() {
-  const handleClick = (e) => {
+const SignUpPage = (): ReactElement => {
+  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
   };
 
@@ -27,7 +26,7 @@ export default function SignUpPage() {
       </Main>
     </div>
   );
-}
+};
 
 const Main = styled.main`
   position: absolute;
@@ -82,3 +81,5 @@ const Button = styled.button`
     box-shadow: inset 1px 1px 3px #cbced1, inset -1px -1px 3px #fff;
   }
 `;
+
+export default SignUpPage;

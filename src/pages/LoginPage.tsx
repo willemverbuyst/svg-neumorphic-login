@@ -1,11 +1,11 @@
-import React from 'react';
+import { ReactElement, MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
-
 import styled from 'styled-components';
 
-export default function LoginPage() {
-  const handleClick = (e) => {
+const LoginPage = (): ReactElement => {
+  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    console.log('Login');
   };
 
   return (
@@ -30,7 +30,7 @@ export default function LoginPage() {
       </Main>
     </div>
   );
-}
+};
 
 const Main = styled.main`
   position: absolute;
@@ -95,3 +95,5 @@ const Llink = styled(Link)`
   color: #068bbf;
   font-size: 1.5rem;
 `;
+
+export default LoginPage;
