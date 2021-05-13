@@ -1,11 +1,11 @@
-import React from 'react';
+import { ReactElement } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Header from '../src/components/Header';
-import HomePage from '../src/pages/HomePage';
-import LoginPage from '../src/pages/LoginPage';
-import SignUpPage from '../src/pages/SignUpPage';
+import Header from './components/Header';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import SignUpPage from './pages/SignUpPage';
 
-function App() {
+const App = (): ReactElement => {
   return (
     <div>
       <Header />
@@ -16,6 +16,6 @@ function App() {
       </Switch>
     </div>
   );
-}
+};
 
 export default App;
