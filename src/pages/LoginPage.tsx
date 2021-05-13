@@ -9,26 +9,17 @@ const LoginPage = (): ReactElement => {
   };
 
   return (
-    <div>
-      <Main>
-        <form>
-          <div>
-            <Input type="email" placeholder="email" />
-          </div>
-          <div>
-            <Input type="password" placeholder="password" />
-          </div>
-          <div>
-            <Button onClick={(e) => handleClick(e)}>Login</Button>
-          </div>
-
-          <Links>
-            <Llink to="/">Forgot password?</Llink> or{' '}
-            <Llink to="/signup">Sign up</Llink>
-          </Links>
-        </form>
-      </Main>
-    </div>
+    <Main>
+      <Form>
+        <Input type="email" placeholder="email" />
+        <Input type="password" placeholder="password" />
+        <Button onClick={(e) => handleClick(e)}>Login</Button>
+        <Links>
+          <Llink to="/">Forgot password?</Llink> or{' '}
+          <Llink to="/signup">Sign up</Llink>
+        </Links>
+      </Form>
+    </Main>
   );
 };
 
@@ -41,6 +32,11 @@ const Main = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
 `;
 
 const Input = styled.input`

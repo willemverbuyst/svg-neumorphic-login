@@ -7,24 +7,14 @@ const SignUpPage = (): ReactElement => {
   };
 
   return (
-    <div>
-      <Main>
-        <form>
-          <div>
-            <Input type="name" placeholder="full name" />
-          </div>
-          <div>
-            <Input type="email" placeholder="email" />
-          </div>
-          <div>
-            <Input type="password" placeholder="password" />
-          </div>
-          <div>
-            <Button onClick={(e) => handleClick(e)}>Sign Up</Button>
-          </div>
-        </form>
-      </Main>
-    </div>
+    <Main>
+      <Form>
+        <Input type="name" placeholder="full name" />
+        <Input type="email" placeholder="email" />
+        <Input type="password" placeholder="password" />
+        <Button onClick={(e) => handleClick(e)}>Sign Up</Button>
+      </Form>
+    </Main>
   );
 };
 
@@ -37,6 +27,11 @@ const Main = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
 `;
 
 const Input = styled.input`
